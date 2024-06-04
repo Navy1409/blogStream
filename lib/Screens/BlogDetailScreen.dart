@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
 class BlogDetailScreen extends StatelessWidget {
   static const routeName = '/blog-detail';
   final DocumentSnapshot blogPost;
@@ -9,11 +10,14 @@ class BlogDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF3A3A3A).withOpacity(.5),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        title: Text(blogPost['title'].toString().toUpperCase()),
-        backgroundColor: Color(0xFF3A3A3A),
+        title: Text(
+          blogPost['title'].toString().toUpperCase(),
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.black, // Setting app bar color to black
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(10.0),
@@ -29,20 +33,26 @@ class BlogDetailScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Text(
-              blogPost['title'],
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF3A3A3A),
-                letterSpacing: 1.2,
-                wordSpacing: 2.0,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                blogPost['title'],
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black, // Setting title color to black
+                  letterSpacing: 1.2,
+                  wordSpacing: 2.0,
+                ),
               ),
             ),
             SizedBox(height: 10),
-            Text(
-              blogPost['content'],
-              style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                blogPost['content'],
+                style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+              ),
             ),
           ],
         ),

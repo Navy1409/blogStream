@@ -18,9 +18,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Blog App',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        primaryColor: Color(0xFF3A3A3A),
-        scaffoldBackgroundColor: Color(0xFFF5F5F5),
         textTheme: TextTheme(
           bodyLarge: TextStyle(color: Colors.black87),
           bodyMedium: TextStyle(color: Colors.black87),
@@ -43,5 +40,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

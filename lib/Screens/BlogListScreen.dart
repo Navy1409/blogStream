@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'BlogDetailScreen.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
+
 class BlogListScreen extends StatefulWidget {
   @override
   _BlogListScreenState createState() => _BlogListScreenState();
@@ -39,10 +40,14 @@ class _BlogListScreenState extends State<BlogListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF3A3A3A).withOpacity(.5),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Blog Posts'),
-        backgroundColor: Color(0xFF3A3A3A),
+        title: Text(
+          'Blog Posts',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.black, // Setting app bar color to black
+        iconTheme: IconThemeData(color: Colors.white), // Setting icon color to white
       ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection('blogPosts').snapshots(),
