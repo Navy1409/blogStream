@@ -41,7 +41,7 @@ class BlogPostTile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              blogPost['tittle'],
+              blogPost['title'],
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

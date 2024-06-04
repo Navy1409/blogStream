@@ -12,7 +12,7 @@ class BlogDetailScreen extends StatelessWidget {
       backgroundColor: Color(0xFF3A3A3A).withOpacity(.5),
       appBar: AppBar(
         centerTitle: true,
-        title: Text(blogPost['tittle'].toString().toUpperCase()),
+        title: Text(blogPost['title'].toString().toUpperCase()),
         backgroundColor: Color(0xFF3A3A3A),
       ),
       body: SingleChildScrollView(
@@ -30,7 +30,7 @@ class BlogDetailScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              blogPost['tittle'],
+              blogPost['title'],
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
